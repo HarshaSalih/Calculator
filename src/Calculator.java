@@ -9,7 +9,7 @@ public class Calculator
         float num2;
         do
         {
-            System.out.println("1.Addition\n2.Subtraction\n3.Multiplication\n4.Addition\n5.Exit");
+            System.out.println("1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Exit");
             System.out.println("Choose an operation");
             Scanner sc=new Scanner(System.in);
             option=sc.nextInt();
@@ -38,10 +38,18 @@ public class Calculator
                     break;
                 case 4:
                     System.out.println("Enter first number");
-                    num1=sc.nextFloat();
+                    int fnum=sc.nextInt();
                     System.out.println("Enter second number");
-                    num2=sc.nextFloat();
-                    System.out.println("Result is : "+(num1/num2));
+                    int snum=sc.nextInt();
+                    try
+                    {
+                        int result=fnum/snum;
+                        System.out.println("Result is : " +result);
+                    }
+                    catch (ArithmeticException e) {
+                        System.out.println ("Can't be divided by Zero " + e);
+                    }
+
                     break;
                 case 5:
                     System.out.println("Exit");
