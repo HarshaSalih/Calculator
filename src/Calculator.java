@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Calculator {
     public static void main(String[] args) {
-        System.out.println("1.Addition\n2.Subtraction\n3.Multiplication\n4.Addition\n5.Other");
+        System.out.println("1.Addition\n2.Subtraction\n3.Multiplication\n4.Addition\n5.Exit");
 
         System.out.println("Choose an operation");
         Scanner sc=new Scanner(System.in);
@@ -15,13 +15,21 @@ public class Calculator {
         {
             case 1:
                 System.out.println("Result is : "+(num1+num2));
-
+                break;
             case 2:
-                System.out.println("Result is "+(num1-num2));
+                System.out.println("Result is : "+(num1-num2));
+                break;
             case 3:
-                System.out.println("Result is "+(num1*num2));
+                System.out.println("Result is : "+(num1*num2));
+                break;
             case 4:
                 System.out.println("Result is : "+(num1/num2));
+                break;
+            case 5:
+                System.out.println("Exit");
+                break;
+            default:
+                System.out.println("Please provide a valid number");
         }
 
 
