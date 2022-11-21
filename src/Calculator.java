@@ -20,6 +20,8 @@ public class Calculator {
                 System.out.println("Result is "+(num1-num2));
             case 3:
                 System.out.println("Result is "+(num1*num2));
+            case 4:
+                System.out.println("Result is : "+(num1/num2));
         }
 
 
